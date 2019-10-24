@@ -4,7 +4,8 @@ require 'pp'
 def gross_for_director(director_data)
   moviecounter = 0 
   gross_of_director = 0
-  while moviecounter < directors_database[director_data][:movies].length do
+  number_of_movies = directors_database[director_data][:movies].length
+  while moviecounter < number_of_movies do
     gross_of_movie = directors_database[director_data][:movies][moviecounter][:worldwide_gross]
     gross_of_director += gross_of_movie
     moviecounter += 1
@@ -16,6 +17,7 @@ def directors_totals(nds)
   i = 0 
   directors_hash = {}
   while i < nds.length do
+    p i
     directors_gross = gross_for_director(i)
     directors_name = nds[i][:name]
     directors_hash[directors_name] = directors_gross
