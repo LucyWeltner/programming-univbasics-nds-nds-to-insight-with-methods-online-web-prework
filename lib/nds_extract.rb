@@ -23,6 +23,7 @@ def directors_totals(nds)
     directors_hash[directors_name] = directors_gross
     i += 1
   end
+  p directors_hash
   return directors_hash
 end 
 
