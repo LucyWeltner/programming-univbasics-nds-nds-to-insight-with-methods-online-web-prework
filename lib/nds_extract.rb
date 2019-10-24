@@ -18,18 +18,14 @@ def directors_totals(nds)
   j = 0
   directors_hash = {}
   while i < nds.length do
-    gross_for_director(nds, i)
-    while j < nds[i][:movies].length do
-      p nds[i][:movies][j]
-      money = nds[i][:movies][j][:worldwide_gross]
-      total += money
-      j += 1
-    end
-    directors_hash[nds[i][:name]] = total
+    directors_gross = gross_for_director(nds, i)
+    directors_name = nds[i][:name]
+    directors_hash[directors_name] = directors_gross
     i += 1
     j = 0
     total = 0
   end
+  return directors_hash
 end 
 
 directors_totals(directors_database())
