@@ -4,7 +4,7 @@ require 'pp'
 def gross_for_director(nds, director)
   moviecounter = 0 
   gross_of_director = 0
-  number_of_movies = nds[directornum][:movies].length
+  number_of_movies = nds[director][:movies].length
   while moviecounter < number_of_movies do
     gross_of_movie = nds[director][:movies][moviecounter][:worldwide_gross]
     gross_of_director += gross_of_movie
