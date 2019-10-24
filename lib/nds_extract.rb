@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 require 'pp'
-def gross_for_director(nds, director)
+def gross_for_director(director_data)
   moviecounter = 0 
   gross_of_director = 0
   number_of_movies = nds[director][:movies].length
@@ -28,7 +28,3 @@ def directors_totals(nds)
 end 
 
 directors_totals(directors_database())
-# Find a way to accumulate the :worldwide_grosses and return that Integer
-# using director_data as input
-def gross_for_director(director_data)
-end
