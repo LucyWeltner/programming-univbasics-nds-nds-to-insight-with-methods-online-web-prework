@@ -17,7 +17,6 @@ def directors_totals(nds)
   i = 0 
   directors_hash = {}
   while i < nds.length do
-    p i
     directors_gross = gross_for_director(i)
     directors_name = nds[i][:name]
     directors_hash[directors_name] = directors_gross
