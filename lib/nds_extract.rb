@@ -10,6 +10,7 @@ def gross_for_director(nds, director)
     gross_of_director += gross_of_movie
     moviecounter += 1
   end 
+  p gross_of_director
   return gross_of_director 
 end
 
