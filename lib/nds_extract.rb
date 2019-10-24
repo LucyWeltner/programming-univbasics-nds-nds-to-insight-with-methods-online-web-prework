@@ -2,6 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 require 'pp'
 def gross_for_director(director_data)
+  p director_data
   moviecounter = 0 
   gross_of_director = 0
   number_of_movies = directors_database[director_data][:movies].length
